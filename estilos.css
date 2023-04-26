@@ -1,0 +1,110 @@
+body {
+    font-family: Roboto;
+    background-color: rgba(214,223,228,255);
+    display: flex;
+    padding-top: 2rem;
+
+}
+.containerG {
+    background-color: rgba(214,223,228,255);
+    margin: auto;
+      display: flex;
+      flex: 0 0 80%;
+}
+
+.container1 {
+  flex: 0 0 70%;
+  margin-top: auto;
+  border-radius: 30px;;
+  box-shadow: -3px 7px 15px gray;
+  
+}
+.container2 {
+  
+  flex: 1;
+}
+.texto {
+  display: flex;
+    height: 80vh; 
+    white-space: pre-wrap;
+}
+
+.textoInput {
+  font-size: 40px;
+  margin: auto;
+      width: 40rem;
+  height: 20rem;
+  white-space: pre-wrap;
+      border: none;
+    outline: none;
+    background-color: rgba(214,223,228,255);
+}
+.botones{
+    display: flex;
+    position: relative;
+    margin-top: auto;
+    bottom:2rem;
+}
+.botonEncriptar {
+      width: 14rem;
+    height: 3rem;
+        margin: auto;
+    position:relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 3px 2px 2px gray;
+
+}
+.botonDesencriptar {
+    width: 14rem;
+    height: 3rem;
+    margin: 0 15rem 0 0;
+    position:relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 3px 2px 2px gray;
+
+    
+}
+
+button:hover {
+  background-color: rgb(129, 179, 209);
+}
+
+.display1 {
+
+    padding: 1rem;
+    margin: 1rem;
+    height: 80vh; 
+    border-radius: 30px;
+    display: flex;
+  flex-direction: column ;
+  background-color:white;
+  box-shadow: 10px 5px 5px gray;
+     
+}
+.cajaBoton{
+    display: flex;
+    position: relative;
+    margin-top: auto;
+    bottom:0;
+}
+.botonCopear{
+    width: 14rem;
+    height: 3rem;
+        margin: auto;
+    position:relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 3px 2px 2px gray;
+    
+}

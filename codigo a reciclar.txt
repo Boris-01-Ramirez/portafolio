@@ -1,32 +1,16 @@
 <!DOCTYPE html>
 <html lang = "en">
 <head>
-     <link rel="stylesheet" type="text/css" href="./estilos.css">
      <meta charset = "UTF-8">
      <title> Cursos de Alura </title>
 </head>
 <body>
-<div class="containerG">
-<div class="container1">
-     <div class="texto">
-     <textarea class="textoInput" type="text" id="entradaTexto" autofocus>
-          </textarea>
-</div class="botonesT">
-     <div class="botones">
-          <button class="botonEncriptar" type="button" value="encriptar" onclick="enciptar()">Encriptar</button>
-          <button class="botonDesencriptar" type="button" value="desencriptar texto" onclick="desenciptar()">Desencriptar texto</button>
-     </div >
-    
-</div>
-<div class="container2">
-     <div class="display1">
-     <p id="resultado"></p>
-     <div class="cajaBoton">
-     <button class="botonCopear" onclick="copiarTexto()">Copiar texto</button>
-     </div>
-</div>
-</div>
-</div>
+     <ul>
+         <li> Vagrant </li>
+         <li> Docker </li>
+         <li> Ansible </li>
+         <li> Integración continua </li>
+     </ul>
 </body>
 <script>
      const normal = {
@@ -42,11 +26,9 @@
                3: "imes",
                4: "ober",
                5: "ufat"
-          }
-              
-     var scriptOutput=""    
-function enciptar() {
-     inputss = document.getElementById("entradaTexto").value
+          }    
+function enciptar(inputss) {
+     var outputss =[]
      const propiedadesNormal = Object.values(normal)
      const propiedadesEcriptadas = Object.values(ecriptadas)
             var ii = 0
@@ -61,6 +43,7 @@ function enciptar() {
                     arrayInputss[ii]= propiedadesEcriptadas[jj]
                     // console.log(arrayInputss[ii-1])
                     // console.log(arrayInputss[jj - 1])
+                    console.log(arrayInputss)
 
                }
                 jj = jj + 1
@@ -68,21 +51,21 @@ function enciptar() {
           }
           ii = ii + 1
      }
-      scriptOutput = arrayInputss.join("")
-      console.log(scriptOutput)
-      document.getElementById("resultado").textContent  = scriptOutput
+      //console.log(outputss)
 }
+     //enciptar("aeiou")
 
-function desenciptar(){
-     inputss = document.getElementById("entradaTexto").value
+
+
+function desenciptar(inputss){
      var outputss = []
      var nn=0
      var inputR=inputss
-     
+     var texto=""
      const propiedadesNormal = Object.values(normal)
      const propiedadesEcriptadas = Object.values(ecriptadas)
     for (const e of propiedadesEcriptadas){
-         var texto = ""
+
           for (var i =0;i< inputR.length;i++){
                var verificar = true;
                for (var j = 0; j < e.length; j++){
@@ -104,23 +87,11 @@ function desenciptar(){
           inputR=texto
          texto += "\n"
          nn=nn+1
-         
     }
-     outputss[0] = texto
-     scriptOutput = outputss.join("")
-     document.getElementById("resultado").textContent  = scriptOutput
-    console.log(outputss[0]);
+
+    console.log(texto);
 }
-
-          function copiarTexto() {
-               var rango = document.createRange();
-               rango.selectNode(document.getElementById("resultado"));
-               window.getSelection().removeAllRanges();
-               window.getSelection().addRange(rango);
-               document.execCommand("copy");
-               window.getSelection().removeAllRanges();
-          }
-
+desenciptar("aienterimesoberufat")
 //https://dev.to/soyleninjs/6-formas-de-convertir-un-string-en-array-con-javascript-320n 
 </script>
 </html>
